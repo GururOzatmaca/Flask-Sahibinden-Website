@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.headerlogo{
+    color: black;
+    text-decoration: none;
+}
+
+header {
+
+    background-color: rgb(63,71,95);
+    height: 70px;
+    width: 100%;
+
+}
+
+header .logo{
+    display: inline-block;
+    background-color: rgb(235, 215, 4);
+    height: 40px;
+    width: 160px;
+}
+
+header p{
+    text-align: center;
+    margin-top: 6px;
+    font-size: 21px;
+    font-weight: bolder;
+    font-family: "SHBGroteskLegacy",sans-serif;
+}
+
+
+header .arama{
+    display: flex;
+}
+
+header input{
+    display: flex;
+    width:300px;
+    height: 40px;
+    border-style: none;
+    color :white;
+    background-color: rgb(47,53,70);
+}
+
+header .logo , input,.searchButton{
+    margin-top: 13px;
+}
+
+
+
+nav{
+    display: flex;
+    gap :12px;
+    margin-left: 18%;
+}
+
+.searchButton{
+    background-color: rgb(47,53,70);
+    border-style:unset ;
+    font-size: 15px;
+    padding: 5px 5px 5px 5px;
+    color: rgba(170, 170, 170, 0.541);
+
+}
+
+.mainContent{
+
+    height: 100vh;
+    padding-left: 18%;
+    padding-right: 12%;
+    display: flex;
+
+
+}
+
+.leftSide{
+    flex:0.25;
+    min-width: 225px;
+
+}
+
+.rightSide{
+    margin-left: 1%;
+    flex :0.75;
+
+}
+
+.listContainer{
+    display: flex;
+    margin : 10px 0 0 0;
+}
+
+.listLogo img{
+    height: 40px;
+    width: 40px;
+    background-size : contain;
+    background-repeat: no-repeat;
+    overflow:  hidden;
+}
+
+.listItem{
+    flex :0.9;
+}
+
+.listItem a{
+    display: block;
+    text-decoration: none;
+    color: #003399;
+    margin : 6px 0 0 0;
+    font-family: "SHBGroteskLegacy",sans-serif;
+    font-size: 14px;
+}
+
+.anasayfa {
+    padding: 15px 0 20px 0;
+    font-family: "SHBGroteskLegacy",sans-serif;
+
+}
+
+
+.items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    grid-gap: 1rem;
+    grid-row-gap: 2.5rem;
+
+}
+
+.searchButton{
+    margin-left: -45px;
+}
+
+
+
+.items a {
+    font-size: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.itemBox{
+    width: 100%;
+    max-height: 140px;
+}
+
+
+.itemBox img{
+
+    max-height: 96px;
+
+}
+
+.productname{
+    font-family: "SHBGroteskLegacy", sans-serif;
+    overflow: hidden;
+    max-height: 17px;
+    line-height: 20px;
+    
+}
+
+.itemBox {
+    text-align: center;
+}
+
+.itemBox img {
+    display: inline-block; 
+    margin: 0 auto; 
+}
+
+
+@media (max-width: 1700px) {
+
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    
+    }
+
+}
+
+@media (max-width: 1550px) {
+
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    
+    }
+
+
+    .items a {
+        font-size: 14px;
+        text-decoration: none;
+        color: black;
+    }
+
+
+}
+
+@media (max-width: 1360px) {
+
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    
+    }
+
+    .items a {
+        font-size: 13px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .searchButton{
+        margin-right: 10%;
+    }
+
+
+}
+
+@media (max-width: 1100px) {
+
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    
+    }
+
+    .leftSide{
+        flex:0.25;
+        min-width: auto;
+    }
+
+
+
+}
+
+
+
+
+@media (max-width: 850px) {
+
+
+    .searchButton{
+        margin-right: 18%;
+    }
+
+    
+    header .logo{
+        display: inline-block;
+        background-color: rgb(235, 215, 4);
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        
+    }
+
+
+    
+
+    nav{
+        display: flex;
+        gap :12px;
+    
+        margin:0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .searchButton{
+        height: 32px;
+        margin-right: 10%;
+
+    }
+
+
+    .logo p{
+        font-size: 72px;
+        overflow: hidden;
+        position: relative;
+        top: -26px;
+        font-weight:    bolder;
+        padding: 0;
+        margin: 0;
+        justify-content: start;
+    }
+    
+    .mainContent{
+
+        height: 100vh;
+        padding-left: 8%;
+        padding-right: 16%;
+        display: flex;
+        gap:30px;
+
+        
+    
+    
+    }
+
+
+}
+
+@media (max-width: 629px) {
+
+
+
+    
+    .items{
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-auto-rows: auto;
+        grid-gap: 1rem;
+    
+    }
+
+    .mainContent{
+        gap: 55px;
+
+    }
+
+
+
+}
+
+
+
+

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahibinden.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/style.css">
+
+
+</head>
+<body>
+
+
+    <header>
+        <nav>
+    
+            <a class = "headerlogo" href="/">
+                <div class="logo">
+                    <p>sahibinden.com</p>
+                </div>
+            </a>
+
+    
+            <form action="/search" method="POST">
+                <input type="text" id="searchInput" name="searchKey" value = "{{search_key}}" class="arama" placeholder="Kelime, ilan no veya magaza adi ile ara">
+            </form>
+
+        </nav>
+    </header>
+
+
+    <section class="main">
+            <div class="mainContent">
+                
+
+
+
+
+                <div class="leftSide">
+                    
+                    {% for category in unique_categories %}
+                    <div class="listContainer">
+                        <div class="listLogo">
+                            {% set logo_row = rows|selectattr('productCategory', 'equalto', category)|first %}
+                            <img src="{{ logo_row.productCategoryLogo }}" alt="">
+                        </div>
+                    
+                        <div class="listItem">
+                            <a href="/search/{{ category }}"><b>{{ category }}</b></a>
+                            {% set unique_subcategories = get_unique_subcategories(rows, category) %}
+                            {% for subcategory in unique_subcategories %}
+                                {% set count = subcategories_counters.get(category, {}).get(subcategory, 0) %}
+                                <a href="/search/{{ subcategory }}">{{ subcategory }} ({{ count }})</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+
+
+
+                
+
+
+                <div class="rightSide">
+
+                    <div class="anasayfa">
+                        <p>Anasayfa Vitrini</p>
+                    </div>
+
+                    <div class="items">
+
+                                                
+                    {% for row in rows %}
+                        <a href="/details/{{ row.productNo }}">
+                            <div class="itemBox">
+                                <img src="{{ row.productImageUrl }}" alt="">
+                                <div class="productname">{{ row.productName }}</div>
+                            </div>
+                        </a>
+                    {% endfor %}
+
+
+                        
+                    </div>
+                    
+                </div>
+
+
+        </div>
+    </section>
+
+
+
+    
+    
+</body>
+</html>

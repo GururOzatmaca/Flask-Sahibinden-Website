@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sahibinden.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="../static/details.css">
+
+
+</head>
+<body>
+
+
+    <header>
+        <nav>
+    
+            <a class = "headerlogo" href="/">
+                <div class="logo">
+                    <p>sahibinden.com</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+
+
+
+    
+    <section class="main">
+        <div class="mainContent">
+
+    
+
+
+            <div class="titledetail">
+                {{rows.productName}}
+            </div>
+
+            <div class="mainDetails">
+
+                <div class="leftPart">
+                        <img src="{{rows.productImageUrl}}" alt="">
+                </div>
+
+
+                <div class="rightPart">
+                    <div class="headerdetails">
+                        <p class = "price"> <strong>{{rows.productPrice}}</strong></p>
+                        <p class = "adress"><strong>{{rows.productAdress}}</strong> </p>
+                    </div>
+
+                    <div class="bodyDetails">
+
+                        <table>
+                            <tr>
+                                <td> <strong>İlan no</strong> </td>
+                                <td class="red">{{rows.productNo}}</td>
+                            </tr>
+                            <tr>
+                                <td> <strong>İlan tarihi</strong> </td>
+                                <td>{{rows.productDate}}</td>
+                            </tr>
+                            <tr>
+                                <td> <strong>Açıklama</strong> </td>
+                                <td>{{rows.productInfo}}</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Kategori</strong> </td>
+                                <td>{{rows.productCategory}} / {{rows.productSubCategory}}</td>
+                            </tr>   
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+   
+                
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+
+
+    
+    
+</body>
+</html>
